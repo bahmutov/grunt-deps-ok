@@ -17,7 +17,7 @@ module.exports = function(grunt) {
   var txt = 'Quickly checks if top level dependencies' +
     ' are missing or out of date';
 
-  grunt.registerTask('deps_ok', txt, function() {
+  grunt.registerTask('deps-ok', txt, function() {
     var verbose = false;
     var ok = depsOk(process.cwd(), verbose);
     if (!ok) {
