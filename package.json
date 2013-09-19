@@ -1,7 +1,7 @@
 {
   "name": "grunt-deps-ok",
   "description": "Quickly checks if top level dependencies are missing or out of date",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/bahmutov/grunt-deps-ok",
   "author": {
     "name": "Gleb Bahmutov",
@@ -21,7 +21,7 @@
       "url": "https://github.com/bahmutov/grunt-deps-ok/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "Gruntfile.js",
+  "main": "index.js",
   "engines": {
     "node": ">= 0.8.0"
   },
