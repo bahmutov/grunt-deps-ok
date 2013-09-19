@@ -38,7 +38,10 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin", "dependencies", "missing", "ondemand"
+    "gruntplugin",
+    "dependencies",
+    "missing",
+    "ondemand"
   ],
   "dependencies": {
     "deps-ok": "0.0.2"
