@@ -1,6 +1,12 @@
 # grunt-deps-ok
 
-> Quickly checks if top level dependencies are missing or out of date
+> Quickly checks if top level dependencies are missing or out of date using [deps-ok](https://github.com/bahmutov/deps-ok)
+
+[![NPM info][nodei.co]](https://npmjs.org/package/grunt-deps-ok)
+
+[![Build status][ci-image]][ci-url]
+[![dependencies][dependencies-image]][dependencies-url]
+[![endorse][endorse-image]][endorse-url]
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -17,73 +23,22 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-deps-ok');
 ```
 
-## The "deps_ok" task
+That's it! Every time grunt runs, it will **quickly** check if all (normal, dev, peer) top
+level dependencies are present in the *node_modules* folder. It will also verify
+that the installed module versions are greater or equal to the ones declared inside *package.json* file.
 
-### Overview
-In your project's Gruntfile, add a section named `deps_ok` to the data object passed into `grunt.initConfig()`.
+## Small print
 
-```js
-grunt.initConfig({
-  deps_ok: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-})
-```
+Author: Gleb Bahmutov &copy; 2013
 
-### Options
+License: MIT - do anything with the code, but don't blame me if it does not work.
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+Support: if you find any problems with this module, email / tweet / open issue on Github
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  deps_ok: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  deps_ok: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
+[ci-image]: https://travis-ci.org/bahmutov/grunt-deps-ok.png?branch=master
+[ci-url]: https://travis-ci.org/bahmutov/grunt-deps-ok
+[nodei.co]: https://nodei.co/npm/grunt-deps-ok.png?downloads=true
+[dependencies-image]: https://david-dm.org/bahmutov/grunt-deps-ok.png
+[dependencies-url]: https://david-dm.org/bahmutov/grunt-deps-ok
+[endorse-image]: https://api.coderwall.com/bahmutov/endorsecount.png
+[endorse-url]: https://coderwall.com/bahmutov
