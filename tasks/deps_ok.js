@@ -15,7 +15,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('deps_ok',
+  grunt.registerTask('deps_ok',
     'Quickly checks if top level dependencies are missing or out of date',
     function() {
       var ok = depsOk(process.cwd(), true);
