@@ -21,6 +21,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 
 ```js
 grunt.loadNpmTasks('grunt-deps-ok');
+grunt.registerTask('default', ['grunt-deps-ok', rest of the tasks]);
 ```
 
 That's it! Every time grunt runs, it will **quickly** check if all (normal, dev, peer) top
