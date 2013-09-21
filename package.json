@@ -1,7 +1,7 @@
 {
   "name": "grunt-deps-ok",
   "description": "Quickly checks if top level dependencies are missing or out of date",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/bahmutov/grunt-deps-ok",
   "author": {
     "name": "Gleb Bahmutov",
@@ -32,7 +32,8 @@
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-bump": "0.0.11"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
