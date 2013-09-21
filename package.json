@@ -44,6 +44,6 @@
     "ondemand"
   ],
   "dependencies": {
-    "deps-ok": "0.0.2"
+    "deps-ok": "0.0.3"
   }
 }
