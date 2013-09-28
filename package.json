@@ -44,8 +44,5 @@
     "dependencies",
     "missing",
     "ondemand"
-  ],
-  "dependencies": {
-    "deps-ok": "0.0.3"
-  }
+  ]
 }
