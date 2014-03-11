@@ -30,15 +30,15 @@
   },
   "pre-commit": "grunt",
   "dependencies": {
-    "deps-ok": "0.0.8"
+    "deps-ok": "^0.3.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-nodeunit": "~0.2.2",
-    "grunt": "~0.4.2",
+    "grunt-contrib-nodeunit": "^0.3.2",
+    "grunt": "^0.4.3",
     "grunt-bump": "0.0.13",
-    "pre-git": "0.0.14"
+    "pre-git": "0.0.15"
   },
   "keywords": [
     "gruntplugin",
