@@ -2,19 +2,36 @@
   "name": "grunt-deps-ok",
   "description": "Quickly checks if top level dependencies are missing or out of date",
   "version": "0.1.8",
-  "homepage": "https://github.com/bahmutov/grunt-deps-ok",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
     "url": "http://glebbahmutov.com/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bahmutov/grunt-deps-ok.git"
-  },
   "bugs": {
     "url": "https://github.com/bahmutov/grunt-deps-ok/issues"
   },
+  "dependencies": {
+    "deps-ok": "0.4.1"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-bump": "0.0.14",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-nodeunit": "0.4.0",
+    "grunt-nice-package": "0.5.2",
+    "pre-git": "0.0.16"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "homepage": "https://github.com/bahmutov/grunt-deps-ok",
+  "keywords": [
+    "gruntplugin",
+    "dependencies",
+    "missing",
+    "ondemand"
+  ],
   "licenses": [
     {
       "type": "MIT",
@@ -22,28 +39,12 @@
     }
   ],
   "main": "Gruntfile.js",
-  "engines": {
-    "node": ">= 0.8.0"
+  "pre-commit": "grunt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/grunt-deps-ok.git"
   },
   "scripts": {
     "test": "grunt test"
-  },
-  "pre-commit": "grunt",
-  "dependencies": {
-    "deps-ok": "^0.4.1"
-  },
-  "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-nodeunit": "^0.4.0",
-    "grunt": "^0.4.5",
-    "grunt-bump": "0.0.14",
-    "pre-git": "0.0.16"
-  },
-  "keywords": [
-    "gruntplugin",
-    "dependencies",
-    "missing",
-    "ondemand"
-  ]
+  }
 }
