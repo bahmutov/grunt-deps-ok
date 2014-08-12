@@ -28,6 +28,16 @@ That's it! Every time grunt runs, it will **quickly** check if all (normal, dev,
 level dependencies are present in the *node_modules* folder. It will also verify
 that the installed module versions are greater or equal to the ones declared inside *package.json* file.
 
+You can configure further by providing options
+
+```js
+// Gruntfile.js
+'deps-ok': {
+  verbose: true,
+  force: true // print error message, but pass the task
+}
+```
+
 There are other modules that check npm dependencies, for example [grunt-check-modules](https://npmjs.org/package/grunt-check-modules).
 It seems to rely on `npm ls` command that takes a long time to go through the dependency tree.
 In my projects, *deps_ok* step takes less than 100ms, compared to 5-10 seconds for *grunt-check-modules*.
