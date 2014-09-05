@@ -27,8 +27,6 @@ module.exports = function(grunt) {
     opts = opts || {};
     var verbose = opts.verbose || false;
     var force = opts.force || false;
-    console.log('options');
-    console.log(opts);
 
     var ok = depsOk(process.cwd(), verbose);
 
