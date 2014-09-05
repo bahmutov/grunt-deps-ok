@@ -59,12 +59,10 @@ module.exports = function(grunt) {
       // get arguments from command line manually
       var verbose = process.argv.some(isVerbose);
       var force = process.argv.some(isForce);
-
-      var options = this.options({
+      checkDeps({
         verbose: verbose,
         force: force
       });
-      checkDeps(options);
     });
   }
 };
