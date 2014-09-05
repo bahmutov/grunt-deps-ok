@@ -13,12 +13,22 @@ var taskDescription = 'Quickly checks if top level dependencies' +
   ' are missing or out of date';
 var depsOk = require('deps-ok');
 
+function isVerbose(option) {
+  return option === '--verbose' || option === '-v';
+}
+
+function isForce(option) {
+  return option === '--force' || option === '-f';
+}
+
 module.exports = function(grunt) {
 
   function checkDeps(opts) {
     opts = opts || {};
     var verbose = opts.verbose || false;
     var force = opts.force || false;
+    console.log('options');
+    console.log(opts);
 
     var ok = depsOk(process.cwd(), verbose);
 
@@ -36,6 +46,7 @@ module.exports = function(grunt) {
 
   if (grunt.config.data[taskName]) {
     grunt.registerMultiTask(taskName, taskDescription, function configuredCheckDeps() {
+      grunt.verbose.writeln('deps-ok multi task mode');
       var options = this.options({
         verbose: false,
         force: false
@@ -43,6 +54,17 @@ module.exports = function(grunt) {
       return checkDeps(options);
     });
   } else {
-    grunt.registerTask(taskName, taskDescription, checkDeps);
+    grunt.registerTask(taskName, taskDescription, function depsOk() {
+      grunt.verbose.writeln('deps-ok default task');
+      // get arguments from command line manually
+      var verbose = process.argv.some(isVerbose);
+      var force = process.argv.some(isForce);
+
+      var options = this.options({
+        verbose: verbose,
+        force: force
+      });
+      checkDeps(options);
+    });
   }
 };
