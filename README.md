@@ -35,6 +35,7 @@ You can configure further by providing options
 'deps-ok': {
   verbose: true,
   force: true // print error message, but pass the task
+  folder: 'path/to/folder/with/package.json' // options, by default current folder
 }
 ```
 

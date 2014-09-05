@@ -27,8 +27,9 @@ module.exports = function(grunt) {
     opts = opts || {};
     var verbose = opts.verbose || false;
     var force = opts.force || false;
+    var folder = opts.folder || process.cwd();
 
-    var ok = depsOk(process.cwd(), verbose);
+    var ok = depsOk(folder, verbose);
 
     if (ok) {
       grunt.log.writeln('dependencies are ok');
@@ -47,7 +48,8 @@ module.exports = function(grunt) {
       grunt.verbose.writeln('deps-ok multi task mode');
       var options = this.options({
         verbose: false,
-        force: false
+        force: false,
+        folder: process.cwd()
       });
       return checkDeps(options);
     });
