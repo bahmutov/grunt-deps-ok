@@ -1,7 +1,7 @@
 {
   "name": "grunt-deps-ok",
   "description": "Quickly checks if top level dependencies are missing or out of date",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -11,7 +11,7 @@
     "url": "https://github.com/bahmutov/grunt-deps-ok/issues"
   },
   "dependencies": {
-    "deps-ok": "0.7.0"
+    "deps-ok": "0.7.1"
   },
   "devDependencies": {
     "grunt": "0.4.5",
