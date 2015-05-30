@@ -28,8 +28,9 @@ module.exports = function(grunt) {
     var verbose = opts.verbose || false;
     var force = opts.force || false;
     var folder = opts.folder || process.cwd();
+    var skipBower = opts.skipBower || false;
 
-    var ok = depsOk(folder, verbose);
+    var ok = depsOk(folder, verbose, skipBower);
 
     if (ok) {
       grunt.log.writeln('dependencies are ok');
@@ -49,7 +50,8 @@ module.exports = function(grunt) {
       var options = this.options({
         verbose: false,
         force: false,
-        folder: process.cwd()
+        folder: process.cwd(),
+        skipBower: false
       });
       return checkDeps(options);
     });

@@ -35,6 +35,7 @@ You can configure further by providing options
 'deps-ok': {
   verbose: true,
   force: true // print error message, but pass the task
+  skipBower: false, // do not check bower.json even if exists
   folder: 'path/to/folder/with/package.json' // options, by default current folder
 }
 ```
@@ -45,7 +46,7 @@ In my projects, *deps_ok* step takes less than 100ms, compared to 5-10 seconds f
 
 ## Small print
 
-Author: Gleb Bahmutov &copy; 2013
+Author: [Gleb Bahmutov](http://glebbahmutov.com/) &copy; 2013
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
