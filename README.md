@@ -33,10 +33,12 @@ You can configure further by providing options
 ```js
 // Gruntfile.js
 'deps-ok': {
-  verbose: true,
-  force: true // print error message, but pass the task
-  skipBower: false, // do not check bower.json even if exists
-  folder: 'path/to/folder/with/package.json' // options, by default current folder
+  options: {
+    verbose: true,
+    force: true // print error message, but pass the task
+    skipBower: false, // do not check bower.json even if exists
+    folder: 'path/to/folder/with/package.json' // options, by default current folder
+  }
 }
 ```
 
