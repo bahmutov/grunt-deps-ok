@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       return true;
     }
 
-    grunt.log.error('problem with dependencies, probably run `npm install`');
+    grunt.log.error('problem with dependencies, probably run `npm update`');
     if (opts.force) {
       return true;
     }
