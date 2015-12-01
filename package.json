@@ -10,11 +10,23 @@
   "bugs": {
     "url": "https://github.com/bahmutov/grunt-deps-ok/issues"
   },
+  "config": {
+    "pre-git": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": [
+        "npm run build"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-merge": []
+    }
+  },
   "contributors": [],
   "dependencies": {
     "deps-ok": "1.0.3"
   },
   "devDependencies": {
+    "git-issues": "1.2.0",
     "grunt": "0.4.5",
     "grunt-bump": "0.6.0",
     "grunt-cli": "0.1.13",
@@ -30,8 +42,8 @@
   },
   "homepage": "https://github.com/bahmutov/grunt-deps-ok",
   "keywords": [
-    "gruntplugin",
     "dependencies",
+    "gruntplugin",
     "missing",
     "ondemand"
   ],
@@ -43,27 +55,15 @@
     }
   ],
   "main": "Gruntfile.js",
-  "pre-commit": [
-    "npm run build",
-    "npm version"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/grunt-deps-ok.git"
   },
   "scripts": {
     "build": "grunt",
-    "test": "grunt test",
+    "commit": "git-issues && commit-wizard",
+    "issues": "git-issues",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "commit": "commit-wizard"
-  },
-  "config": {
-    "pre-git": {
-      "commit-msg": "validate-commit-msg",
-      "pre-commit": [],
-      "pre-push": [],
-      "post-commit": [],
-      "post-merge": []
-    }
+    "test": "grunt test"
   }
 }
